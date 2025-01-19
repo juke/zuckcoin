@@ -20,8 +20,8 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="min-h-screen relative overflow-y-auto bg-[#0a0a0a]">
-      <div className="relative h-full w-full flex flex-col bg-[#0a0a0a]">
+    <section className="min-h-screen relative overflow-y-auto bg-[#050817]">
+      <div className="relative h-full w-full flex flex-col bg-[#050817]">
         {/* Lamp Section - Fixed height */}
         <div className="h-[25vh] md:h-[35vh] relative">
           <LampContainer className="absolute inset-0 w-full h-full -translate-y-1/3">

@@ -45,6 +45,13 @@ jobs:
       - name: Create .nojekyll file
         run: touch ./dist/.nojekyll
 
+      - name: Create .htaccess file
+        run: |
+          echo "AddType application/javascript .js" > ./dist/.htaccess
+          echo "AddType application/javascript .mjs" >> ./dist/.htaccess
+          echo "AddType text/javascript .js" >> ./dist/.htaccess
+          echo "AddType text/javascript .mjs" >> ./dist/.htaccess
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
 

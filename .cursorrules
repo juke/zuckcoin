@@ -35,7 +35,7 @@
 - tailwind and shadcn for styling
 - React Three Fiber for 3D elements
 - GSAP for smooth animations
-- Responsive breakpoints (mobile-first)
+- Responsive breakpoints
 - Lightweight asset loading
 
 NOTE: use pnpm for package manager

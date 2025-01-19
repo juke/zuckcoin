@@ -53,13 +53,10 @@ jobs:
           cat > ./dist/_headers << EOL
           /*
             Content-Type: text/html; charset=utf-8
-            Permissions-Policy: interest-cohort=(), private-state-token-redemption=(), private-state-token-issuance=()
           /*.js
-            Content-Type: application/javascript; charset=utf-8
-          /*.mjs
-            Content-Type: application/javascript; charset=utf-8
+            Content-Type: application/javascript
           /*.css
-            Content-Type: text/css; charset=utf-8
+            Content-Type: text/css
           /*.png
             Content-Type: image/png
           /*.jpg

@@ -24,7 +24,14 @@ export default function Hero() {
       <div className="relative h-full w-full flex flex-col bg-[#0a0a0a]">
         {/* Lamp Section - Fixed height */}
         <div className="h-[25vh] md:h-[35vh] relative">
-          <LampContainer className="absolute inset-0 w-full h-full -translate-y-1/3" />
+          <LampContainer className="absolute inset-0 w-full h-full -translate-y-1/3">
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="w-full h-full"
+            />
+          </LampContainer>
         </div>
 
         {/* Content Section */}

@@ -23,7 +23,7 @@ export default function Hero() {
     <section className="min-h-screen relative overflow-y-auto bg-[#050713]">
       <div className="relative h-full w-full flex flex-col bg-[#050713]">
         {/* Lamp Section - Fixed height */}
-        <div className="h-[25vh] md:h-[35vh] relative">
+        <div className="h-[27vh] md:h-[30vh] relative -top-10 md:top-0">
           <LampContainer className="absolute inset-0 w-full h-full -translate-y-1/3">
             <motion.div
               initial={{ opacity: 0, y: 10 }}
@@ -42,7 +42,7 @@ export default function Hero() {
               {/* Image */}
               <div 
                 ref={imageRef}
-                className="relative w-48 h-48 md:w-72 md:h-72 mb-4 md:mb-8"
+                className="relative w-48 h-48 md:w-72 md:h-72 mb-4 md:mb-12"
               >
                 {/* Outer glow */}
                 <div className="absolute -inset-4 bg-[#0554CE] rounded-full opacity-30 blur-xl" />

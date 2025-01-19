@@ -162,3 +162,45 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--secondary);
 }
+
+/* Custom animations */
+@keyframes grid {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(40px);
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes tilt {
+  0%, 50%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(2deg);
+  }
+  75% {
+    transform: rotate(-2deg);
+  }
+}
+
+.animate-gradient {
+  animation: gradient 8s linear infinite;
+}
+
+.animate-tilt {
+  animation: tilt 10s infinite linear;
+}

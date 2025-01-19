@@ -14,6 +14,9 @@ export default defineConfig({
   build: {
     rollupOptions: {
       output: {
+        format: 'es',
+        chunkFileNames: 'assets/js/[name].[hash].js',
+        entryFileNames: 'assets/js/[name].[hash].js',
         assetFileNames: (assetInfo) => {
           if (!assetInfo.name) return 'assets/[name].[hash][extname]'
           const info = assetInfo.name.split('.')
@@ -22,17 +25,10 @@ export default defineConfig({
             return `assets/images/[name].[hash][extname]`
           }
           return `assets/[name].[hash][extname]`
-        },
-        chunkFileNames: 'assets/js/[name].[hash].js',
-        entryFileNames: 'assets/js/[name].[hash].js',
+        }
       },
     },
     sourcemap: true,
     manifest: true,
-  },
-  server: {
-    headers: {
-      'Content-Type': 'application/javascript',
-    },
-  },
+  }
 })

@@ -23,9 +23,14 @@ export default function Hero() {
             even lizard people need their own cryptocurrency.
           </p>
           
-          <button className="bg-[#4267B2] hover:bg-[#365899] text-white font-bold py-4 px-8 rounded-full text-lg transition-all transform hover:scale-105">
+          <a 
+            href="https://pump.fun/coin/9ncU1H8JeiMf1nKjAi955MxEs8GTqB3cr9Lh8zrEpump"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-[#4267B2] hover:bg-[#365899] text-white font-bold py-4 px-8 rounded-full text-lg transition-all transform hover:scale-105"
+          >
             Buy $ZUCK Now
-          </button>
+          </a>
         </div>
       </div>
       

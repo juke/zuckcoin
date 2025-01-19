@@ -45,15 +45,16 @@ jobs:
       - name: Create .nojekyll file
         run: touch ./dist/.nojekyll
 
-      - name: Create .htaccess file
+      - name: Configure custom domain
         run: |
-          echo "AddType application/javascript .js" > ./dist/.htaccess
-          echo "AddType application/javascript .mjs" >> ./dist/.htaccess
-          echo "AddType text/javascript .js" >> ./dist/.htaccess
-          echo "AddType text/javascript .mjs" >> ./dist/.htaccess
+          echo "/* /index.html 200" > ./dist/_redirects
+          echo '{"routes":[{"src": "/(.*)\\.js$","headers": {"content-type": "application/javascript"}},{"src": "/(.*)\\.mjs$","headers": {"content-type": "application/javascript"}},{"src": "/(.*)\\.css$","headers": {"content-type": "text/css"}}]}' > ./dist/vercel.json
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
+        with:
+          enablement: true
+          static_site_generator: vite
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

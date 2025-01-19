@@ -109,7 +109,7 @@ export default function Hero() {
                 >
                   <TextGenerateEffect 
                     words="Welcome to the memetic revolution! $ZUCK isn't just another coin – it's a digital tribute to the ultimate tech overlord turned meme sensation. Join us in celebrating the awkward charm and robot-like charisma that made Zuck a living meme. 🤖✨"
-                    className="text-white/90 mb-6 text-sm md:text-base [text-shadow:_0_0_20px_rgb(5_84_206)]"
+                    className="text-white mb-6 text-sm md:text-base [text-shadow:_0_0_20px_rgb(5_84_206)]"
                     duration={0.00001}
                     filter={false}
                   />
@@ -117,12 +117,12 @@ export default function Hero() {
 
                 <motion.p 
                   initial={{ opacity: 0 }}
-                  animate={{ opacity: 0.8 }}
+                  animate={{ opacity: 1 }}
                   transition={{
                     delay: 1.5,
                     duration: 0.5,
                   }}
-                  className="text-xs md:text-sm text-white font-medium [text-shadow:_0_0_15px_rgb(5_84_206)]"
+                  className="text-white text-xs md:text-sm font-medium [text-shadow:_0_0_15px_rgb(5_84_206)]"
                 >
                   http://zuckcoin.xyz/ is not affiliated with Mark Zuckerberg, it is a community meme!
                 </motion.p>

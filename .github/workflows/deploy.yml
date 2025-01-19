@@ -48,23 +48,6 @@ jobs:
       - name: Copy CNAME
         run: cp public/CNAME dist/
 
-      - name: Configure headers
-        run: |
-          cat > ./dist/_headers << EOL
-          /*
-            Content-Type: text/html; charset=utf-8
-          /*.js
-            Content-Type: application/javascript
-          /*.css
-            Content-Type: text/css
-          /*.png
-            Content-Type: image/png
-          /*.jpg
-            Content-Type: image/jpeg
-          /*.svg
-            Content-Type: image/svg+xml
-          EOL
-
       - name: Setup Pages
         uses: actions/configure-pages@v4
         with:

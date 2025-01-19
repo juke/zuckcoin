@@ -45,10 +45,13 @@ jobs:
       - name: Create .nojekyll file
         run: touch ./dist/.nojekyll
 
-      - name: Configure custom domain
+      - name: Copy CNAME
+        run: cp public/CNAME dist/
+
+      - name: Configure headers
         run: |
-          echo "/* /index.html 200" > ./dist/_redirects
-          echo '{"routes":[{"src": "/(.*)\\.js$","headers": {"content-type": "application/javascript"}},{"src": "/(.*)\\.mjs$","headers": {"content-type": "application/javascript"}},{"src": "/(.*)\\.css$","headers": {"content-type": "text/css"}}]}' > ./dist/vercel.json
+          mkdir -p ./dist/.well-known
+          echo '{"headers":[{"source":"/(.*)\\.js$","headers":[{"key":"Content-Type","value":"application/javascript"}]},{"source":"/(.*)\\.css$","headers":[{"key":"Content-Type","value":"text/css"}]},{"source":"/(.*)\\.png$","headers":[{"key":"Content-Type","value":"image/png"}]},{"source":"/(.*)\\.jpg$","headers":[{"key":"Content-Type","value":"image/jpeg"}]},{"source":"/(.*)\\.svg$","headers":[{"key":"Content-Type","value":"image/svg+xml"}]}]}' > ./dist/.well-known/headers.json
 
       - name: Setup Pages
         uses: actions/configure-pages@v4

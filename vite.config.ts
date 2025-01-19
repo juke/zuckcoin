@@ -14,6 +14,9 @@ export default defineConfig({
   build: {
     rollupOptions: {
       output: {
+        format: 'es',
+        entryFileNames: 'assets/[name].[hash].mjs',
+        chunkFileNames: 'assets/[name].[hash].mjs',
         assetFileNames: (assetInfo) => {
           if (!assetInfo.name) return 'assets/[name].[hash][extname]'
           const info = assetInfo.name.split('.')
@@ -23,8 +26,6 @@ export default defineConfig({
           }
           return `assets/[name].[hash][extname]`
         },
-        chunkFileNames: 'assets/js/[name].[hash].js',
-        entryFileNames: 'assets/js/[name].[hash].js',
       },
     },
     sourcemap: true,
